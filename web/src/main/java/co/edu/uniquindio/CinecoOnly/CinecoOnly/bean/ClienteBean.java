@@ -1,5 +1,6 @@
 package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
 
+import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.ClienteExistenteException;
 import lombok.Getter;
 import lombok.Setter;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Cliente;
@@ -43,6 +44,8 @@ public class ClienteBean implements Serializable{
             clienteServicio.registrarCliente(cliente);
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta", "Registro exitoso");
             FacesContext.getCurrentInstance().addMessage(null, msg);
-        } catch (Exception e) {}
+        } catch (ClienteExistenteException e) {
+            e.getMessage();
+        }
     }
 }

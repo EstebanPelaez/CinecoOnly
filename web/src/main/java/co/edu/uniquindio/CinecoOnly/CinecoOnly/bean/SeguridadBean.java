@@ -20,7 +20,10 @@ public class SeguridadBean implements Serializable {
     private boolean autenticado;
 
     @Getter @Setter
-    private String email, contrasenia;
+    private String email;
+
+    @Getter @Setter
+    private String contrasenia;
 
     @Getter @Setter
     private Cliente clienteSesion;
