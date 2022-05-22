@@ -28,6 +28,7 @@ public class Sucursal {
     @Length(max = 80)
     private String direccion;
 
+    @Getter @Setter
     private String estado;
 
     @ManyToOne

@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @ToString
-public class Tipo_Ticket {
+public class TipoTicket {
 
     @Id
     @Column(nullable = false)

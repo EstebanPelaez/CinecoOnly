@@ -33,7 +33,7 @@ public class ClienteServicioImpl implements ClienteServicio {
     }
 
     @Override
-    public Cliente actualizarCliente(Cliente c) throws Exception {
+    public Cliente actualizarCliente(Cliente c) throws UsuarioNoEncontradoException {
         return null;
     }
 

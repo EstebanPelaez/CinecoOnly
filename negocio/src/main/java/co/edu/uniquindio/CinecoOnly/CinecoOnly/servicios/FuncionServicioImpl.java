@@ -2,6 +2,9 @@ package co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios;
 
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Funcion;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
+import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.CarteleraSinPeliculasException;
+import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.PeliculaExistenteException;
+import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.PeliculaNoEncontradaException;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.FuncionRepo;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.PeliculaRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,51 +23,49 @@ public class FuncionServicioImpl implements  FuncionServicio{
     private PeliculaRepo peliculaRepo;
 
     @Override
-    public List<Pelicula> listarCartelera() throws Exception{
+    public List<Pelicula> listarCartelera() throws CarteleraSinPeliculasException {
 
         return peliculaRepo.listarCartelera();
     }
 
     @Override
-    public List<Pelicula> listarProximosEstrenos() throws Exception{
+    public List<Pelicula> listarProximosEstrenos() throws CarteleraSinPeliculasException{
 
         return peliculaRepo.listarProximosEstrenos();
     }
     @Override
-    public Funcion publicarFuncion(Funcion f) throws Exception {
+    public Funcion publicarFuncion(Funcion f) throws PeliculaExistenteException {
 
         try{
-            Funcion funcion = funcionRepo.save(f);
-
-            return funcion;
+            return funcionRepo.save(f);
         }catch (Exception e){
-            throw new Exception(e.getMessage());
+            throw new PeliculaExistenteException(e.getMessage());
         }
     }
 
     @Override
-    public void actualizarFuncion(Funcion f) throws Exception {
+    public void actualizarFuncion(Funcion f) throws PeliculaNoEncontradaException {
         try {
             funcionRepo.save(f);
 
         }catch(Exception e){
-            throw new Exception(e.getMessage());
+            throw new PeliculaNoEncontradaException(e.getMessage());
         }
     }
 
     @Override
-    public void eliminarFuncion(Funcion f) throws Exception {
+    public void eliminarFuncion(Funcion f) throws PeliculaNoEncontradaException {
         Optional<Funcion> funcion = funcionRepo.findById(f.getCodigoFuncion());
         if(funcion.isEmpty()){
-            throw new Exception("El codigo del producto no existe");
+            throw new PeliculaNoEncontradaException("El codigo del producto no existe");
         }else{
             funcionRepo.deleteById(f.getCodigoFuncion());
         }
     }
 
     @Override
-    public Pelicula obtenerPelicula(Integer codigo) throws Exception {
-        return peliculaRepo.findById(codigo).orElseThrow(() -> new Exception("El código de la pelicula no es válido"));
+    public Pelicula obtenerPelicula(Integer codigo) throws PeliculaNoEncontradaException {
+        return peliculaRepo.findById(codigo).orElseThrow(() -> new PeliculaNoEncontradaException("El código de la pelicula no es válido"));
     }
 
 

@@ -40,5 +40,6 @@ public class Funcion {
     @OneToOne
     private Sala sala;
 
+    @Getter @Setter
     private String estado;
 }

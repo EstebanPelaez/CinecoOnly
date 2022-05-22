@@ -21,10 +21,11 @@ public class Ticket {
     @Column(nullable = false)
     private LocalDate fechaCompra;
 
+    @Getter @Setter
     private String estado;
 
     @OneToOne
-    private Tipo_Ticket tipoTicket;
+    private TipoTicket tipoTicket;
 
     @OneToOne
     private Asiento asiento;

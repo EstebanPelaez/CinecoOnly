@@ -1,6 +1,8 @@
 package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
 
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
+import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.CarteleraSinPeliculasException;
+import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.PeliculaNoEncontradaException;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.FuncionServicio;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,9 +27,16 @@ public class CarteleraBean {
     private List<Pelicula> proximosEstrenos;
 
     @PostConstruct
-    public void inicializar() throws Exception{
-        cartelera = funcionServicio.listarCartelera();
-        proximosEstrenos = funcionServicio.listarProximosEstrenos();
+    public void inicializar(){
+
+        try{
+            cartelera = funcionServicio.listarCartelera();
+            proximosEstrenos = funcionServicio.listarProximosEstrenos();
+
+        }catch(CarteleraSinPeliculasException e){
+            e.getMessage();
+        }
+
     }
 
     public String irADetalle(String id) {
