@@ -36,7 +36,7 @@ public class InformacionPeliculaBean{
         }
 
     }
-    public String SeleccionarAsiento(String id){
+    public String seleccionarAsiento(String id){
         return "/horarios?faces-redirect=true&amp;pelicula="+id;
     }
 }

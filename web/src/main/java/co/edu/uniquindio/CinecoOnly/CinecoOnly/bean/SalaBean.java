@@ -23,6 +23,7 @@ public class SalaBean {
 
     @PostConstruct
     public void inicializar(){
+        System.out.println("Terminar");
     }
 
 }
