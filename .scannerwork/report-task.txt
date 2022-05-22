@@ -2,5 +2,5 @@ projectKey=cinecoOnly_test
 serverUrl=http://localhost:9000
 serverVersion=9.4.0.54424
 dashboardUrl=http://localhost:9000/dashboard?id=cinecoOnly_test
-ceTaskId=AYDqeK3c-w1j8JCjopX2
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYDqeK3c-w1j8JCjopX2
+ceTaskId=AYDqfvMg-w1j8JCjopX3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYDqfvMg-w1j8JCjopX3
