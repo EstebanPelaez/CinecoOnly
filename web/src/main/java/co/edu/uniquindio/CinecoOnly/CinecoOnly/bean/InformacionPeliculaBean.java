@@ -4,13 +4,11 @@ import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.FuncionServicio;
 import lombok.Getter;
 import lombok.Setter;
-import net.bytebuddy.build.BuildLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
-import java.io.Serializable;
 
 @ViewScoped
 @Component

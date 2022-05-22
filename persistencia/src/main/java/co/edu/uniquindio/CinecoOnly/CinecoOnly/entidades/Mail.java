@@ -13,10 +13,17 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Mail {
+
+    @Getter @Setter
     private String username;
+    @Getter @Setter
     private String to;
+    @Getter @Setter
     private String subject;
+    @Getter @Setter
     private String text;
+    @Getter @Setter
     private File file;
+    @Getter @Setter
     private Date sendDate;
 }

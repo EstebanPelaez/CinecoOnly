@@ -35,6 +35,7 @@ public class Cliente {
     @Length(max = 80,min = 6, message = "Longitud no válida para la contraseña")
     private String contrasenia;
 
+    @Getter @Setter
     private String estado;
 
     @OneToMany(mappedBy = "cliente")

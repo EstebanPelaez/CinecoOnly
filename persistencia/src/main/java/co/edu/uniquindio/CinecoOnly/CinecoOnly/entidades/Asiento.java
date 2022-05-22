@@ -23,6 +23,7 @@ public class Asiento {
     @Column(nullable = false)
     private String letra;
 
+    @Getter @Setter
     private String estado;
 
     @ManyToOne

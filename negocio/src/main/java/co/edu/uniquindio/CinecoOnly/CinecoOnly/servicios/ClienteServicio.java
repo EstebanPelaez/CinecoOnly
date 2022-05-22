@@ -9,7 +9,7 @@ public interface ClienteServicio {
 
     Cliente registrarCliente(Cliente c) throws ClienteExistenteException;
 
-    Cliente actualizarCliente(Cliente c) throws Exception;
+    Cliente actualizarCliente(Cliente c) throws UsuarioNoEncontradoException;
 
     Cliente iniciarSesion(String email, String contrasenia) throws DatosErroneosException;
 
