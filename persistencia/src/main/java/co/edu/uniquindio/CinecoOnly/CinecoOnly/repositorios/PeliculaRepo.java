@@ -1,6 +1,6 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios;
+package co.edu.uniquindio.cinecoonly.cinecoonly.repositorios;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
