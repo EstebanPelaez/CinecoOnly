@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades;
+package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
 
@@ -21,10 +21,11 @@ public class Ticket {
     @Column(nullable = false)
     private LocalDate fechaCompra;
 
+    @Getter @Setter
     private String estado;
 
     @OneToOne
-    private Tipo_Ticket tipoTicket;
+    private TipoTicket tipoTicket;
 
     @OneToOne
     private Asiento asiento;
@@ -35,7 +36,7 @@ public class Ticket {
     @ManyToOne
     private Funcion funcion;
 
-    public Ticket(Integer codigoTicket, LocalDate fechaCompra, String estado, Tipo_Ticket tipoTicket, Asiento asiento, Cliente cliente, Funcion funcion) {
+    public Ticket(Integer codigoTicket, LocalDate fechaCompra, String estado, TipoTicket tipoTicket, Asiento asiento, Cliente cliente, Funcion funcion) {
         this.codigoTicket = codigoTicket;
         this.fechaCompra = fechaCompra;
         this.estado = estado;

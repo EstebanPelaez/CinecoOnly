@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades;
+package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
@@ -27,6 +27,7 @@ public class Sucursal {
     @Length(max = 80)
     private String direccion;
 
+    @Getter @Setter
     private String estado;
 
     @ManyToOne

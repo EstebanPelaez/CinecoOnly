@@ -1,16 +1,15 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
+package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.FuncionServicio;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.FuncionServicio;
 import lombok.Getter;
 import lombok.Setter;
-import net.bytebuddy.build.BuildLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
-import java.io.Serializable;
 
 @ViewScoped
 @Component
@@ -38,7 +37,7 @@ public class InformacionPeliculaBean{
         }
 
     }
-    public String SeleccionarAsiento(String id){
+    public String seleccionarAsiento(String id){
         return "/horarios?faces-redirect=true&amp;pelicula="+id;
     }
 }

@@ -1,9 +1,9 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades;
+package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.*;
 
 import javax.persistence.*;
-
 @Entity
 @Getter
 @Setter
@@ -23,6 +23,7 @@ public class Asiento {
     @Column(nullable = false)
     private String letra;
 
+    @Getter @Setter
     private String estado;
 
     @ManyToOne

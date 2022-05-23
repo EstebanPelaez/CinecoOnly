@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades;
+package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
 
@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @ToString
-public class Tipo_Ticket {
+public class TipoTicket {
 
     @Id
     @Column(nullable = false)

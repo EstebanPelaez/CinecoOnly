@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades;
+package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
 
@@ -18,6 +18,7 @@ public class Sala {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer codigoSala;
 
+    @Getter @Setter
     private String estado;
 
     @OneToMany(mappedBy = "sala")

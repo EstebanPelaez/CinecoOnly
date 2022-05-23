@@ -1,9 +1,9 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly;
+package co.edu.uniquindio.cinecoonly.cinecoonly;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.*;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.FuncionRepo;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.PeliculaRepo;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.SalaRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.FuncionRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.PeliculaRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.SalaRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -20,7 +19,6 @@ public class FuncionTest {
 
     @Autowired
     private FuncionRepo funcionRepo;
-
     @Autowired
     private PeliculaRepo peliculaRepo;
 

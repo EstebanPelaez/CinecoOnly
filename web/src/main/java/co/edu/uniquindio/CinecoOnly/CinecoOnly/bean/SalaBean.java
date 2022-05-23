@@ -1,7 +1,7 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
+package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Asiento;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.FuncionServicio;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Asiento;
+import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.FuncionServicio;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +23,7 @@ public class SalaBean {
 
     @PostConstruct
     public void inicializar(){
+        System.out.println("Terminar");
     }
 
 }

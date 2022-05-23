@@ -9,6 +9,7 @@
         <module>persistencia</module>
         <module>negocio</module>
         <module>web</module>
+        <module>webAdmin</module>
     </modules>
 
     <parent>

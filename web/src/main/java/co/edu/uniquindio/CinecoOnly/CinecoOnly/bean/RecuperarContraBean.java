@@ -1,9 +1,9 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
+package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Cliente;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Mail;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.ClienteServicio;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.MailService;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Cliente;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Mail;
+import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.ClienteServicio;
+import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.MailService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import javax.faces.view.ViewScoped;
 
 @Component
 @ViewScoped
-public class recuperarContraBean {
+public class RecuperarContraBean {
 
     @Getter
     @Setter
@@ -51,10 +51,10 @@ public class recuperarContraBean {
         if(!correo.trim().equals("")&&identificiacion!=null){
             try {
                 Cliente usuario = clienteServicio.recuperarContrasenia(correo, identificiacion);
-                String password = usuario.getContrasenia();
+                String contrasenia = usuario.getContrasenia();
                 String email = usuario.getEmail();
 
-                String mensaje = "Cinecon Only te informa\nTu contraseña es: "+password+"\nRecuerda que tu contraseña es privada y no debe ser compartida";
+                String mensaje = "Cinecon Only te informa\nTu contraseña es: "+contrasenia+"\nRecuerda que tu contraseña es privada y no debe ser compartida";
 
                 correoService.sendSimpleMail(new Mail("uwu@gmail.com", email, "Recuperar Contraseña CinecoOnly", mensaje, null, null));
                 FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Información", "Mail enviado con exito");

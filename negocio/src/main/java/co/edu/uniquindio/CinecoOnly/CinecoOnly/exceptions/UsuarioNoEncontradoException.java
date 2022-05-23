@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions;
+package co.edu.uniquindio.cinecoonly.cinecoonly.exceptions;
 
 public class UsuarioNoEncontradoException extends Exception{
     public UsuarioNoEncontradoException (String mensaje){

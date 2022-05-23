@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades;
+package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
@@ -35,6 +35,7 @@ public class Cliente {
     @Length(max = 80,min = 6, message = "Longitud no válida para la contraseña")
     private String contrasenia;
 
+    @Getter @Setter
     private String estado;
 
     @OneToMany(mappedBy = "cliente")

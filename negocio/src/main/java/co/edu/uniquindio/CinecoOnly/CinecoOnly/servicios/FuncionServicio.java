@@ -1,21 +1,24 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios;
+package co.edu.uniquindio.cinecoonly.cinecoonly.servicios;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Funcion;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Funcion;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.CarteleraSinPeliculasException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.PeliculaExistenteException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.PeliculaNoEncontradaException;
 
 import java.util.List;
 
 public interface FuncionServicio {
 
-    List<Pelicula> listarCartelera() throws Exception;
+    List<Pelicula> listarCartelera() throws CarteleraSinPeliculasException;
 
-    List<Pelicula> listarProximosEstrenos() throws Exception;
+    List<Pelicula> listarProximosEstrenos() throws CarteleraSinPeliculasException;
 
-    Funcion publicarFuncion(Funcion f) throws Exception;
+    void publicarFuncion(Funcion f) throws PeliculaExistenteException;
 
-    void actualizarFuncion(Funcion f) throws Exception;
+    void actualizarFuncion(Funcion f) throws PeliculaNoEncontradaException;
 
-    void eliminarFuncion(Funcion f) throws Exception;
+    void eliminarFuncion(Funcion f) throws PeliculaNoEncontradaException;
 
-    Pelicula obtenerPelicula(Integer codigo) throws Exception;
+    Pelicula obtenerPelicula(Integer codigo) throws PeliculaNoEncontradaException;
 }
