@@ -1,10 +1,10 @@
 package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Ciudad;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Cliente;
 import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.ClienteExistenteException;
 import lombok.Getter;
 import lombok.Setter;
-import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Cliente;
-import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Ciudad;
 import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.ClienteServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

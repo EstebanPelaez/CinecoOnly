@@ -1,7 +1,8 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly;
+package co.edu.uniquindio.cinecoonly.cinecoonly;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.*;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.*;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.*;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.*;
+import com.mysql.cj.xdevapi.Client;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class TicketTest {
     private AsientoRepo asientoRepo;
 
     @Autowired
-    private Tipo_TicketRepo tipo_ticketRepo;
+    private TipoTicketRepo tipo_ticketRepo;
 
     @Autowired
     private ClienteRepo clienteRepo;
@@ -41,7 +42,7 @@ public class TicketTest {
         LocalDate fecha = LocalDate.of(2023, 5 , 15);
         Cliente cliente = clienteRepo.getById(1);
         Funcion funcion = funcionRepo.getById(1);
-        Tipo_Ticket tipoTicket = tipo_ticketRepo.getById(1);
+        TipoTicket tipoTicket = tipo_ticketRepo.getById(1);
         Asiento asiento = asientoRepo.getById(1);
 
         Ticket ticket = new Ticket(2, fecha, "Disponible", tipoTicket, asiento, cliente, funcion);

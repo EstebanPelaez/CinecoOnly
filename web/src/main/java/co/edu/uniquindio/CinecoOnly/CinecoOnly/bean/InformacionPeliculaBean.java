@@ -1,6 +1,7 @@
 package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
 import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
 import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.FuncionServicio;
 import lombok.Getter;
 import lombok.Setter;

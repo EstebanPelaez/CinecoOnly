@@ -36,7 +36,7 @@ public class Ticket {
     @ManyToOne
     private Funcion funcion;
 
-    public Ticket(Integer codigoTicket, LocalDate fechaCompra, String estado, Tipo_Ticket tipoTicket, Asiento asiento, Cliente cliente, Funcion funcion) {
+    public Ticket(Integer codigoTicket, LocalDate fechaCompra, String estado, TipoTicket tipoTicket, Asiento asiento, Cliente cliente, Funcion funcion) {
         this.codigoTicket = codigoTicket;
         this.fechaCompra = fechaCompra;
         this.estado = estado;

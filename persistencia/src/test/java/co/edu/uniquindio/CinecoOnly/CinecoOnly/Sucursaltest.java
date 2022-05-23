@@ -1,11 +1,9 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly;
+package co.edu.uniquindio.cinecoonly.cinecoonly;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Ciudad;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Cliente;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Sala;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Sucursal;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.CiudadRepo;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.SucursalRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Ciudad;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Sucursal;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.CiudadRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.SucursalRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

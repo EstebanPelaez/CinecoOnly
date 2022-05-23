@@ -1,9 +1,9 @@
 package co.edu.uniquindio.cinecoonly.cinecoonly.entidades;
 
 import lombok.*;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.*;
 
 import javax.persistence.*;
-
 @Entity
 @Getter
 @Setter

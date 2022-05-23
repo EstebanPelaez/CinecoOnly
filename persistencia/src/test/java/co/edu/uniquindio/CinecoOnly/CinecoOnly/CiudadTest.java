@@ -1,7 +1,7 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly;
+package co.edu.uniquindio.cinecoonly.cinecoonly;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Ciudad;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.CiudadRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Ciudad;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.CiudadRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
