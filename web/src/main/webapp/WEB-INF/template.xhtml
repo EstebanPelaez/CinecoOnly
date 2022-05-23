@@ -3,11 +3,11 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-    xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:p="http://primefaces.org/ui"
-    xmlns:jsf="http://xmlns.jcp.org/jsf"
-    xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -19,79 +19,92 @@
 
 </h:head>
 <div class="container">
-<h:body>
-    <p:card>
-    <div id= "header" class="header" >
-            <div class="header-top" style="margin-top: 41px; background-color: #e5e6e7; border-radius: 14px">
-               <div class="nav-item">
-                       <img src="/uploads/Logo Principal.png"  alt="..." width="410px" height="130px" style="margin-left: 380px"/>
+    <h:body>
+        <p:card>
+            <div id="header" class="header">
+                <div class="header-top" style="margin-top: 41px; background-color: #e5e6e7; border-radius: 14px">
+                    <div class="nav-item">
+                        <img src="/uploads/Logo Principal.png" alt="..." width="410px" height="130px"
+                             style="margin-left: 380px"/>
 
+                    </div>
                 </div>
+
+                <h:panelGrid id="grid" columns="6" style="margin-left: 20px">
+
+                    <p:commandButton icon="bx bx-home" class="btn btn-outline-secondary " value="Home"
+                                     styleClass="btn btn-primary" action="index.xhtml?faces-redirect=true"/>
+                    <p:commandButton icon="bx bx-movie" class="btn btn-outline-secondary " value="Cartelera"
+                                     styleClass="btn btn-primary" action="cartelera.xhtml?faces-redirect=true"
+                                     style="margin: 10px"/>
+
+                    <h:form action="" rendered="#{!seguridadBean.autenticado}" style="margin: 10px; margin-left:750px"
+                            styleClass="center">
+                        <p:commandButton styleClass="btn btn-primary " value="Ingresar" onclick="PF('login').show()"
+                                         icon="pi pi-user"/>
+                        <p:commandButton styleClass="btn btn-primary" value="Registrarse"
+                                         action="registrar_cliente.xhtml?faces-redirect=true"
+                                         style="margin-left: 10px"/>
+                    </h:form>
+                    <div id="info-sesion" jsf:rendered="#{seguridadBean.autenticado}"
+                         style="margin: 20px;margin-left: 570px">
+                        <p>Bienvenido #{seguridadBean.clienteSesion.nombre}</p>
+                        <h:form>
+                            <p:commandButton styleClass="btn btn-primary me-1" action="#{seguridadBean.cerrarSesion}"
+                                             value="Cerrar sesion" icon="pi pi-sign-out"/>
+                        </h:form>
+                    </div>
+
+                </h:panelGrid>
             </div>
 
-        <h:panelGrid id="grid" columns="6" style="margin-left: 20px">
-
-                 <p:commandButton icon="bx bx-movie" class="btn btn-outline-secondary " value="Cartelera" styleClass="btn btn-primary" action="cartelera.xhtml?faces-redirect=true" style="margin: 10px"/>
-                 <p:commandButton icon="bx bx-home" class="btn btn-outline-secondary " value="Home" styleClass="btn btn-primary" action="index.xhtml?faces-redirect=true" />
-
-                  <h:form action="" rendered="#{!seguridadBean.autenticado}" style="margin: 10px; margin-left:750px" styleClass="center" >
-                     <p:commandButton styleClass="btn btn-primary " value="Ingresar" onclick="PF('login').show()" icon="pi pi-user"/>
-                     <p:commandButton styleClass="btn btn-primary"  value="Registrarse" action="registrar_cliente.xhtml?faces-redirect=true" style="margin-left: 10px"/>
+            <p:dialog header="Iniciar sesión" showEffect="fade" widgetVar="login" modal="true"
+                      rendered="#{!seguridadBean.autenticado}" styleClass="align-middle">
+                <h:form>
+                    <div class="row" style="padding: 0px">
+                        <div class="col">
+                            <p:outputLabel for="email_login" value="Correo electrónico:"/>
+                        </div>
+                        <div class="col">
+                            <p:inputText id="email_login" value="#{seguridadBean.email}" required="true"/>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col">
+                            <p:outputLabel for="password_login" value="Password:"/>
+                        </div>
+                        <div class="col">
+                            <p:password id="password_login" value="#{seguridadBean.contrasenia}" required="true"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">
+                            <a href="/recuperar_contrasenia.xhtml">Recuperar contraseña</a>
+                        </div>
+                    </div>
+                    <div style="margin-left: 80px">
+                        <p:commandButton value="Iniciar Sesión" action="#{seguridadBean.iniciarSesion}"
+                                         styleClass="mt-4" update="@form" style="alignment: right"
+                                         icon="pi pi-sign-in"/>
+                    </div>
+                    <p:growl for="login-bean" showDetail="true"/>
                 </h:form>
-                 <div id="info-sesion" jsf:rendered="#{seguridadBean.autenticado}" style="margin: 20px;margin-left: 570px">
-                      <p>Bienvenido #{seguridadBean.clienteSesion.nombre}</p>
-                      <h:form>
-                          <p:commandButton styleClass="btn btn-primary me-1" action="#{seguridadBean.cerrarSesion}" value="Cerrar sesion" icon="pi pi-sign-out"/>
-                     </h:form>
-                 </div>
-
-        </h:panelGrid>
-    </div>
-
-         <p:dialog header="Iniciar sesión" showEffect="fade" widgetVar="login" modal="true" rendered="#{!seguridadBean.autenticado}" styleClass="align-middle">
-        <h:form  >
-            <div class="row" style="padding: 0px">
-                <div class="col">
-                    <p:outputLabel for="email_login" value="Correo electrónico:" />
-                </div>
-                <div class="col">
-                    <p:inputText id="email_login"  value = "#{seguridadBean.email}" required="true" />
-                </div>
-            </div>
-            <div class="row" style="margin-top: 15px">
-                <div class="col">
-                    <p:outputLabel for="password_login" value="Password:" />
-                </div>
-                <div class="col">
-                    <p:password id="password_login" value="#{seguridadBean.contrasenia}" required="true"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col">
-                    <a href="/recuperar_contrasenia.xhtml">Recuperar contraseña</a>
-                </div>
-            </div>
-            <div style="margin-left: 80px">
-                <p:commandButton value="Iniciar Sesión" action="#{seguridadBean.iniciarSesion}" styleClass="mt-4" update="@form" style="alignment: right" icon="pi pi-sign-in" />
-            </div>
-            <p:growl for="login-bean" showDetail="true" />
-        </h:form>
-    </p:dialog>
-    </p:card>
-    <div id="content" style="margin-top: 30px">
-        <div class="container">
-            <ui:insert name="content"></ui:insert>
-        </div>
-    </div>
-    <div class="py-4 bg-light" align="center">
-        <div class="justify-content-center" >
-            <div class="col-10" >
-                <span>Universidad del Quindío - Ingeniería de Software III- 2022</span>
+            </p:dialog>
+        </p:card>
+        <div id="content" style="margin-top: 30px">
+            <div class="container">
+                <ui:insert name="content"></ui:insert>
             </div>
         </div>
-    </div>
+        <div class="py-4 bg-light" align="center">
+            <div class="justify-content-center">
+                <div class="col-10">
+                    <span>Universidad del Quindío - Ingeniería de Software III- 2022</span>
+                </div>
+            </div>
+        </div>
 
-</h:body>
+    </h:body>
 </div>
 </html>

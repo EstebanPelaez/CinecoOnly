@@ -1,10 +1,10 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios;
+package co.edu.uniquindio.cinecoonly.cinecoonly.servicios;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Cliente;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.ClienteExistenteException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.DatosErroneosException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.UsuarioNoEncontradoException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.repositorios.ClienteRepo;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Cliente;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.ClienteExistenteException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.DatosErroneosException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.UsuarioNoEncontradoException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.repositorios.ClienteRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
+package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Cliente;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.ClienteServicio;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Cliente;
+import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.ClienteServicio;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;

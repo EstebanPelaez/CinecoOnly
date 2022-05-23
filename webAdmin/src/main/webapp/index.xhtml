@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <head><title></title></head>
+</h:head>
+<ui:composition template="WEB-INF/template.xhtml">
+
+    <ui:define name="title">CineCo Only</ui:define>
+    <ui:define name="content">
+        <h1 class="display-5 mb-2 text-center">Index</h1>
+        <h:form>
+            <h:panelGrid class="display-5" columns="2" cellpadding="5" style="margin-left: 500px">
+                <h:panelGrid class="display-5" columns="2" cellpadding="5">
+
+                    <p:outputLabel value="Nombre: " for="nombre_p"/>
+                    <p:inputText id="nombre_p"  required="true" value="#{funcionBean.funcion.pelicula.nombre}"/>
+
+                    <p:outputLabel value="Descripción: " for="descripcion_p"/>
+                    <p:inputText id="descripcion_p"  required="true" value="#{funcionBean.funcion.pelicula.descripcion}"/>
+
+                    <p:outputLabel for="range" value="Rango de Fechas"/>
+                    <p:datePicker id="range" required="true" selectionMode="range" readonlyInput="true" value="#{funcionBean.rangoFechas}"/>
+
+                    <div class="card">
+                        <h5>Single</h5>
+                        <h:form enctype="multipart/form-data">
+                            <p:fileUpload value="#{fileUploadView.file}" mode="simple" skinSimple="true"/>
+
+                            <p:commandButton value="Submit" ajax="false" action="#{fileUploadView.upload}" styleClass="p-mt-3 ui-button-outlined p-d-block"/>
+                        </h:form>
+                    </div>
+
+                </h:panelGrid>
+
+            </h:panelGrid>
+
+            <p:commandButton value="Registrar Función" action="#{funcionBean.registrarFuncion}" update = "@form" icon="pi pi-plus" style="margin: 70px; margin-left: 600px"/>
+
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>
+</html>

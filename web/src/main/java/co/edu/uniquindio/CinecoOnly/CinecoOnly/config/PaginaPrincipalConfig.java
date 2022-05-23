@@ -1,4 +1,4 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.config;
+package co.edu.uniquindio.cinecoonly.cinecoonly.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

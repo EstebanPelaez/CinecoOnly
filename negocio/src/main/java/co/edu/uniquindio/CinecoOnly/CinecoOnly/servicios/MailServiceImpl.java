@@ -1,7 +1,7 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios;
+package co.edu.uniquindio.cinecoonly.cinecoonly.servicios;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Mail;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.MailNoEncontradoException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Mail;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.MailNoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;

@@ -1,10 +1,10 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios;
+package co.edu.uniquindio.cinecoonly.cinecoonly.servicios;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Funcion;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.CarteleraSinPeliculasException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.PeliculaExistenteException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.PeliculaNoEncontradaException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Funcion;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.CarteleraSinPeliculasException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.PeliculaExistenteException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.PeliculaNoEncontradaException;
 
 import java.util.List;
 

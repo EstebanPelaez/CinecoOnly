@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <head><title></title></head>
+</h:head>
+<ui:composition template="WEB-INF/template.xhtml">
+
+    <ui:define name="title">Crear Función</ui:define>
+    <ui:define name="content">
+
+        <h1 class="display-5 mb-2 text-center">Crear Función</h1>
+        <h:form>
+            <h:panelGrid class="display-5" columns="2" cellpadding="5" style="margin-left: 500px">
+                <h:panelGrid class="display-5" columns="2" cellpadding="5">
+
+                    <p:outputLabel value="Codigo: " for="codigo_c"/>
+                    <p:inputText id="codigo_c"  required="true"/>
+
+                    <p:outputLabel value="Nombre: " for="nombre_c"/>
+                    <p:inputText id="nombre_c"  required="true"/>
+
+                    <p:outputLabel value="Contraseña: " for="contrasenia_c"/>
+                    <p:password id="contrasenia_c"  required="true"/>
+
+                    <p:outputLabel value="Email: " for="email_c"/>
+                    <p:inputText id="email_c"  required="true"/>
+
+                </h:panelGrid>
+
+            </h:panelGrid>
+
+            <p:commandButton value="Registrar Función" action="#{funcionBean.registrarFuncion}" update = "@form" icon="pi pi-plus" style="margin: 70px; margin-left: 600px"/>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>
+</html>

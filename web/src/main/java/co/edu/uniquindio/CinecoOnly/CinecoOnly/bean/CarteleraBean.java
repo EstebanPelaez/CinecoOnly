@@ -1,9 +1,8 @@
-package co.edu.uniquindio.CinecoOnly.CinecoOnly.bean;
+package co.edu.uniquindio.cinecoonly.cinecoonly.bean;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.CarteleraSinPeliculasException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.exceptions.PeliculaNoEncontradaException;
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios.FuncionServicio;
+import co.edu.uniquindio.cinecoonly.cinecoonly.entidades.Pelicula;
+import co.edu.uniquindio.cinecoonly.cinecoonly.exceptions.CarteleraSinPeliculasException;
+import co.edu.uniquindio.cinecoonly.cinecoonly.servicios.FuncionServicio;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
