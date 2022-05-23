@@ -16,10 +16,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -74,14 +71,22 @@ public class FuncionBean implements Serializable {
 
 
         imagen=event.getFile();
+        OutputStream outputStream = null;
 
         try{
             File archivo = new File(urlUploads+"/"+imagen.getFileName());
-            OutputStream outputStream = new FileOutputStream(archivo);
+            outputStream = new FileOutputStream(archivo);
             IOUtils.copy(imagen.getInputStream(), outputStream);
             funcion.getPelicula().setImagen(imagen.getFileName());
         }catch (Exception e){
-            e.printStackTrace();
+            e.getMessage();
+        }finally {
+            try {
+                outputStream.close();
+            } catch (IOException|NullPointerException e) {
+                e.getMessage();
+            }
+
         }
     }
 

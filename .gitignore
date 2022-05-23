@@ -2,7 +2,10 @@
 *.class
 
 #Archivos temporales de maven
-/**/target/
+/**/target/clases
+/**/target/generated-sources
+/**/target/web-1.0-SNAPSHOT
+/**/target/webAdmin-1.0-SNAPSHOT
 
 #Archivos de Intellij
 *.iml
