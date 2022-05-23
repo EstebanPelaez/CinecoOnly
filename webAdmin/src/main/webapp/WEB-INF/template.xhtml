@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><ui:insert name="title">CinecoOnly</ui:insert></title>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="css" name="styles.css"/>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'/>
+
+</h:head>
+<div class="container">
+    <h:body>
+        <p:card>
+            <div id="header" class="header">
+                <div class="header-top" style="margin-top: 41px; background-color: #e5e6e7; border-radius: 14px">
+                    <div class="nav-item">
+                        <img src="/uploads/Logo Principal.png" alt="..." width="410px" height="130px"
+                             style="margin-left: 380px"/>
+                    </div>
+                </div>
+
+                <h:panelGrid id="grid" columns="6" style="margin-left: 20px">
+                    <p:commandButton icon="bx bx-home" class="btn btn-outline-secondary " value="Home"
+                                     styleClass="btn btn-primary" action="index.xhtml?faces-redirect=true"/>
+                    <p:commandButton icon="bx bx-movie" class="btn btn-outline-secondary " value="Crear Funcion"
+                                     styleClass="btn btn-primary" action="funcion.xhtml?faces-redirect=true"
+                                     style="margin: 10px"/>
+
+                </h:panelGrid>
+            </div>
+        </p:card>
+
+        <div id="content" style="margin-top: 30px">
+            <div class="container">
+                <ui:insert name="content"></ui:insert>
+            </div>
+        </div>
+        <div class="py-4 bg-light" align="center">
+            <div class="justify-content-center">
+                <div class="col-10">
+                    <span>Universidad del Quindío - Ingeniería de Software III- 2022</span>
+                </div>
+            </div>
+        </div>
+
+    </h:body>
+</div>
+</html>
