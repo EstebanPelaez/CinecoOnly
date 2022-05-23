@@ -1,0 +1,1 @@
+insert into tipo_ticket values (1,null);

@@ -11,6 +11,8 @@ import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -18,6 +20,8 @@ public class PeliculaTest {
 
     @Autowired
     private PeliculaRepo peliculaRepo;
+
+    Logger logger;
 
     /**
      * En este método se crea una pelicula, con el fin de realizar una prueba unitaria
@@ -78,9 +82,9 @@ public class PeliculaTest {
         for(Pelicula miPeli : peliculas){
             contador = +1;
             if (peliculas.size()==contador){
-                System.out.println(miPeli.getNombre());
+                logger.log(Level.INFO,miPeli.getNombre());
             }else{
-                System.out.println("No concuerda la cantidad de peliculas");
+                logger.log(Level.INFO,"No concuerda la cantidad de peliculas");
             }
         }
     }
@@ -98,9 +102,9 @@ public class PeliculaTest {
         for(Pelicula miPeli : peliculas){
             contador = +1;
             if (peliculas.size()==contador){
-                System.out.println(miPeli.getNombre());
+                logger.log(Level.INFO,miPeli.getNombre());
             }else{
-                System.out.println("No concuerda la cantidad de peliculas");
+                logger.log(Level.INFO,"No concuerda la cantidad de peliculas");
             }
         }
     }

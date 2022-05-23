@@ -22,7 +22,7 @@ public class Pelicula implements Serializable {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer codigoPelicula;
 
-
+    @Getter @Setter
     private String nombre;
 
     @Future

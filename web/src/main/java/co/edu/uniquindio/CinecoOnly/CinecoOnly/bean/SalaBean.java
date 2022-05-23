@@ -21,9 +21,4 @@ public class SalaBean {
     @Getter @Setter
     private List<Asiento> listaAsientos;
 
-    @PostConstruct
-    public void inicializar(){
-        System.out.println("Terminar");
-    }
-
 }

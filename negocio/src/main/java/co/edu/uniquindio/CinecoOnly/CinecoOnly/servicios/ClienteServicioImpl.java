@@ -24,11 +24,6 @@ public class ClienteServicioImpl implements ClienteServicio {
         if(buscado.isPresent()){
             throw new ClienteExistenteException("El codigo del cliente ya existe");
         }
-        //buscado = null; -> terminar
-        /*if(buscado.isPresent()){
-            throw new Exception("El email del cliente ya está registrado");
-        }*/
-
        return clienteRepo.save(c);
     }
 
