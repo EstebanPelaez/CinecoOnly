@@ -26,4 +26,8 @@ public class Ciudad {
     @ToString.Exclude
     private List<Sucursal> sucursal;
 
+    public Ciudad(Integer codigoCiudad, String nombre) {
+        this.codigoCiudad = codigoCiudad;
+        this.nombre = nombre;
+    }
 }

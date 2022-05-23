@@ -45,9 +45,12 @@ public class Pelicula implements Serializable {
     @ToString.Exclude
     private List<Funcion> funciones;
 
-    public Pelicula(Integer codigoPelicula, String nombre, String descripcion) {
+    public Pelicula(Integer codigoPelicula, String nombre, LocalDate fechaInicio, LocalDate fechaFin, String imagen) {
         this.codigoPelicula = codigoPelicula;
         this.nombre = nombre;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.imagen = imagen;
         this.descripcion = descripcion;
     }
 }
