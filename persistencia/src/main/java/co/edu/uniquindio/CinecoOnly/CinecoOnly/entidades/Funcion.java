@@ -41,4 +41,9 @@ public class Funcion {
     private Sala sala;
 
     private String estado;
+
+    public Funcion(Integer codigoFuncion, String estado) {
+        this.codigoFuncion = codigoFuncion;
+        this.estado = estado;
+    }
 }

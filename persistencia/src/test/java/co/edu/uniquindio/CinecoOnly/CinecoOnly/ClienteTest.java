@@ -27,7 +27,7 @@ public class ClienteTest {
      */
 
     @Test
-    @Sql("classpath:clientePrueba.sql")
+    @Sql("classpath:usuarioPrueba.sql")
     public void registrarTest(){
 
     Cliente cliente = new Cliente(1, "Esteban", "esteban@gmail.com", "1234516", "Soltero");

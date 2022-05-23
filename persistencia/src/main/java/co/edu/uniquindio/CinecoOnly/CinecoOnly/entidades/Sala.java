@@ -30,6 +30,9 @@ public class Sala {
     @ManyToOne
     private Sucursal sucursal;
 
-
-
+    public Sala(Integer codigoSala, String estado, Funcion funcion) {
+        this.codigoSala = codigoSala;
+        this.estado = estado;
+        this.funcion = funcion;
+    }
 }
