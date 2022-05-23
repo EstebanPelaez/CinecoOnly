@@ -37,4 +37,12 @@ public class Sucursal {
     @OneToMany(mappedBy = "sucursal")
     @ToString.Exclude
     private List<Sala> salas;
+
+    public Sucursal(Integer codigoSucursal, String nombre, String direccion, String estado) {
+
+        this.codigoSucursal = codigoSucursal;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.estado = estado;
+    }
 }
