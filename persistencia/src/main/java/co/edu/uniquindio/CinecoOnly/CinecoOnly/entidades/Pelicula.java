@@ -22,14 +22,16 @@ public class Pelicula implements Serializable {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer codigoPelicula;
 
-    @ToString.Exclude
+
     private String nombre;
 
     @Future
     @Column(nullable = false)
+    @ToString.Exclude
     private LocalDate fechaInicio;
 
     @Column(nullable = false)
+    @ToString.Exclude
     private LocalDate fechaFin;
 
     @ToString.Exclude
@@ -42,4 +44,14 @@ public class Pelicula implements Serializable {
     @OneToMany(mappedBy = "pelicula")
     @ToString.Exclude
     private List<Funcion> funciones;
+
+    public Pelicula(Integer codigoPelicula,  String descripcion,  LocalDate fechaFin, LocalDate fechaInicio , String imagen, String nombre) {
+
+        this.codigoPelicula = codigoPelicula;
+        this.nombre = nombre;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+    }
 }

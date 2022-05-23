@@ -36,4 +36,6 @@ public class Ticket {
     @ManyToOne
     private Funcion funcion;
 
+
+
 }

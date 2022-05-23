@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @ToString
+@AllArgsConstructor
 public class Funcion {
 
     @Id
@@ -42,4 +43,6 @@ public class Funcion {
 
     @Getter @Setter
     private String estado;
+
+
 }
