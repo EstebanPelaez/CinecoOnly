@@ -11,7 +11,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @ToString
-
 public class Sucursal {
 
     @Id
@@ -38,11 +37,12 @@ public class Sucursal {
     @ToString.Exclude
     private List<Sala> salas;
 
-    public Sucursal(Integer codigoSucursal, String nombre, String direccion, String estado) {
+    public Sucursal(Integer codigoSucursal, String nombre, String direccion, String estado, Ciudad ciudad) {
 
         this.codigoSucursal = codigoSucursal;
         this.nombre = nombre;
         this.direccion = direccion;
         this.estado = estado;
+        this.ubicacion = ciudad;
     }
 }
