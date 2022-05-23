@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @ToString
+@AllArgsConstructor
 public class Funcion {
 
     @Id
@@ -42,8 +43,5 @@ public class Funcion {
 
     private String estado;
 
-    public Funcion(Integer codigoFuncion, String estado) {
-        this.codigoFuncion = codigoFuncion;
-        this.estado = estado;
-    }
+
 }
