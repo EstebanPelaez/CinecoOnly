@@ -14,7 +14,7 @@ public interface FuncionServicio {
 
     List<Pelicula> listarProximosEstrenos() throws CarteleraSinPeliculasException;
 
-    Funcion publicarFuncion(Funcion f) throws PeliculaExistenteException;
+    void publicarFuncion(Funcion f) throws PeliculaExistenteException;
 
     void actualizarFuncion(Funcion f) throws PeliculaNoEncontradaException;
 
