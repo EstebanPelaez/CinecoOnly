@@ -1,0 +1,1 @@
+insert into sucursal values(4, "calima", "CALLE 8", "Disponible");

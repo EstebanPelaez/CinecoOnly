@@ -1,0 +1,1 @@
+insert into funcion values(4, "Disponible");
