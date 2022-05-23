@@ -23,7 +23,7 @@ public class TicketTest {
     private AsientoRepo asientoRepo;
 
     @Autowired
-    private TipoTicketRepo tipo_ticketRepo;
+    private TipoTicketRepo tipoTicketRepo;
 
     @Autowired
     private ClienteRepo clienteRepo;
@@ -42,7 +42,7 @@ public class TicketTest {
         LocalDate fecha = LocalDate.of(2023, 5 , 15);
         Cliente cliente = clienteRepo.getById(1);
         Funcion funcion = funcionRepo.getById(1);
-        TipoTicket tipoTicket = tipo_ticketRepo.getById(1);
+        TipoTicket tipoTicket = tipoTicketRepo.getById(1);
         Asiento asiento = asientoRepo.getById(1);
 
         Ticket ticket = new Ticket(2, fecha, "Disponible", tipoTicket, asiento, cliente, funcion);

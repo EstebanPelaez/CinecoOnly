@@ -19,9 +19,7 @@
 .image-ring .ui-ring-item img {
     width: 100%;
 }
-.asiento{
 
-}
 #search-bar{
     width: 50%;
 }
@@ -76,11 +74,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0.65rem 1rem;
-    font-size: .75rem;
-    border: none;
     text-align: center;
-    font-weight: 400;
 }
 
 .nav-tabs {
@@ -89,7 +83,6 @@
     display: flex;
     justify-content: space-between;
     padding-top: 1rem;
-    display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-column-gap: 0.5rem;
 }
@@ -137,9 +130,7 @@
     transition: all 0.6s;
     cursor:pointer;
 }
-.item-pro{
-    margin-bottom: 10px;
-}
+
 .icon-menu{
     font-size: 1.5rem;
 }
@@ -189,7 +180,6 @@
 
 .font {
     font-size: 20px;
-    font-family: "Verdana";
 }
 .product-item .product-image {
     width: 50%;
@@ -245,17 +235,9 @@
     min-height: 48px;
 }
 
-.ui-galleria{
-    border: 0px !important;
-}
-
 .ui-galleria-frame-content img{
     max-width: 60px;
     width: auto !important;
-}
-
-.ui-datalist-item p{
-    font-weight: normal;
 }
 
 .blog-comment::before,
@@ -303,7 +285,6 @@
     border-radius: 4px;
     background: #fff;
     color: #6b6e80;
-    position: relative;
 }
 
 .blog-comment .meta {
@@ -381,9 +362,6 @@
 .alignmenta{
 
     align-items: revert;
-}
-
-#dropdownMenuButton{
 }
 
 .dropdown-menu li:hover{
