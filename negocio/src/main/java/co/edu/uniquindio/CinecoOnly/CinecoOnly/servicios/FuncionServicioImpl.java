@@ -34,10 +34,11 @@ public class FuncionServicioImpl implements  FuncionServicio{
         return peliculaRepo.listarProximosEstrenos();
     }
     @Override
-    public Funcion publicarFuncion(Funcion f) throws PeliculaExistenteException {
+    public void publicarFuncion(Funcion f) throws PeliculaExistenteException {
 
         try{
-            return funcionRepo.save(f);
+            peliculaRepo.save(f.getPelicula());
+            funcionRepo.save(f);
         }catch (Exception e){
             throw new PeliculaExistenteException(e.getMessage());
         }
